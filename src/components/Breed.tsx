@@ -5,8 +5,17 @@ import {fetchClient} from "@/lib/utils";
 import {useEffect, useState} from "react";
 import Image from "next/image";
 
+type BreedImage = {
+    image?: {
+        id: string;
+        url: string;
+        width: number;
+        height: number;
+    }[]
+}
+
 export default function Breed({url}: {url: string}) {
-    const [breed, setBreed] = useState({});
+    const [breed, setBreed] = useState<BreedImage>({});
     const {slug} = useParams();
     const [loading, setLoading] = useState(true);
 
