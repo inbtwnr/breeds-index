@@ -12,10 +12,12 @@ type BreedImage = {
         width: number;
         height: number;
     }[]
+    name: string;
+    description: string;
 }
 
 export default function Breed({url}: {url: string}) {
-    const [breed, setBreed] = useState<BreedImage>({});
+    const [breed, setBreed] = useState<>({});
     const {slug} = useParams();
     const [loading, setLoading] = useState(true);
 
