@@ -5,6 +5,7 @@ export type BreedType = {
         width: number;
         height: number;
     }[]
+    id: string;
     name: string;
     description: string;
 }
