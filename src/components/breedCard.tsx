@@ -2,7 +2,7 @@ import Link from "next/link";
 import {Card, CardHeader, CardTitle} from "@/components/card";
 import Image from "next/image";
 
-export default function BreedCard({id, name, image, species}) {
+export default function BreedCard({id, name, image, species}: {id: string, name: string, image: {url: string, width: number, height: number}, species: string}) {
     return (<Link href={`/breed/${species}/${id}`}>
         <Card className={'hover:opacity-80 flex-1 basis-80 lg:h-[380px] flex flex-col sm:max-w-[400px] lg:max-w-[336px] xl:max-w-[420px] overflow-hidden transition-all duration-100'} key={id}>
             <div className={'flex-grow overflow-hidden'}>

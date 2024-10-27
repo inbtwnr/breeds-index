@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
 import {fetchClient} from "@/lib/utils";
+import {BreedType} from "@/types/breed";
 
 const LIMIT = 10;
 
 export function useBreeds() {
-    const [breeds, setBreeds] = useState([]);
+    const [breeds, setBreeds] = useState<BreedType[]>([]);
     const [loading, setLoading] = useState(false);
 
     function fetchBreeds(url, animal) {

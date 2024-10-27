@@ -4,17 +4,7 @@ import {useParams} from "next/navigation";
 import {fetchClient} from "@/lib/utils";
 import {useEffect, useState} from "react";
 import Image from "next/image";
-
-type BreedType = {
-    image?: {
-        id: string;
-        url: string;
-        width: number;
-        height: number;
-    }[]
-    name: string;
-    description: string;
-}
+import {BreedType} from "@/types/breed";
 
 export default function Breed({url}: {url: string}) {
     const [breed, setBreed] = useState<BreedType>({
