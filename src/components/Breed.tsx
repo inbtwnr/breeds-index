@@ -10,7 +10,8 @@ export default function Breed({url}: {url: string}) {
     const [breed, setBreed] = useState<BreedType>({
         name: '',
         description: '',
-        image: []
+        image: [],
+        id: ''
     } as BreedType);
     const {slug} = useParams();
     const [loading, setLoading] = useState(true);
