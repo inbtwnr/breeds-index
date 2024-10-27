@@ -5,7 +5,7 @@ import {fetchClient} from "@/lib/utils";
 import {useEffect, useState} from "react";
 import Image from "next/image";
 
-export default function Breed({url}) {
+export default function Breed({url}: {url: string}) {
     const [breed, setBreed] = useState({});
     const {slug} = useParams();
     const [loading, setLoading] = useState(true);
