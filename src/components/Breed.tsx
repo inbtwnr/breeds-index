@@ -40,7 +40,7 @@ export default function Breed({url}) {
         <>
             <div>
                 {breed.image?.map((image) => (
-                    <Image src={image.url} width={image.width} height={image.height} alt={breed.name} />
+                    <Image key={image.id} src={image.url} width={image.width} height={image.height} alt={breed.name} />
                 ))}
             </div>
             <div className={'space-y-2'}>
