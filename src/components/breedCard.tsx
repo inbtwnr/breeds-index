@@ -11,7 +11,7 @@ export default function BreedCard({id, name, image, species}: BreedCardProps) {
     return (<Link href={`/breed/${species}/${id}`}>
         <Card className={'hover:opacity-80 flex-1 basis-80 lg:h-[380px] flex flex-col sm:max-w-[400px] lg:max-w-[336px] xl:max-w-[420px] overflow-hidden transition-all duration-100'} key={id}>
             {image && (<div className={'flex-grow overflow-hidden'}>
-                <Image width={image.width} height={image.height} className={'h-full object-cover'} src={image.url}
+                <Image width={image?.width} height={image?.height} className={'h-full object-cover'} src={image?.url}
                        alt={name}/>
             </div>)}
             <CardHeader className={'flex-shrink-0'}>
